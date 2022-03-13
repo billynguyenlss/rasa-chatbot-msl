@@ -1,0 +1,204 @@
+version: "3.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - xin chào
+    - xin chao
+    - cho anh hỏi
+    - cho anh hoi
+    - alo
+    - buzz
+    - có đó không
+    - co do khong
+    - oi oi
+    - em ơi
+    - em oi
+    - tôi muốn được tư vấn
+    - toi muon duoc tu van
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - tạm biệt
+    - tam biet
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - đúng
+    - dung
+    - đúng rồi em
+    - dung roi em
+    - uhm
+    - uh
+    - phải
+    - phai
+    - yup
+    - chính xác
+    - chinh xac
+    - cũng được
+    - cung duoc
+    - duoc
+    - được
+    - ok
+    - được rồi
+    - duoc roi
+    - được rồi thanks
+    - duoc roi thanks
+    - được rồi cám ơn nhé
+    - duoc roi cam on nhe
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - không được
+    - không phải
+    - không nhé
+    - chắc không em ơi
+    - không
+    - khong duoc
+    - khong phai
+    - chac khong em oi
+    - khong
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - bạn là bot hay là người
+    - em là máy à
+    - bạn là người à
+    - bạn là chatbot phải không
+    - ban la bot hay la nguoi
+    - em la may a
+    - ban la nguoi a
+    - ban la chat bot phai khong
+
+- intent: hd_dongphi
+  examples: |
+    - hướng dẫn đóng phí
+    - huong dan dong phi
+    - cách đóng phí
+    - cach dong phi
+    - làm thế nào để đóng phí
+    - lam the nao de dong phi
+    - toi muon dong phi
+    - tôi muốn đóng phí
+    - tôi muốn đóng tiền
+    - toi muon dong tien
+    - làm thế nào để đóng tiền
+    - lam the nao de dong tien
+    - cách đóng tiền
+    - cach dong tien
+
+- intent: quenmatkhau
+  examples: |
+    - quên mật khẩu msl
+    - quên mật khẩu my sun life
+    - quên mật khẩu my sl
+    - quen mat khau msl
+    - quen mat khau my sun life
+    - quen mat khau my sl
+    - tôi không đăng nhập được ứng dụng msl
+    - toi khong dang nhap duoc ung dung my sun life
+    - toi khong dang nhap duoc my sl
+    - khong nho mat khau my sl
+    - không nhớ mật khẩu my sun life
+
+- intent: trogiup
+  examples: |
+    - tôi muốn được trợ giúp
+    - toi muon duoc tro giup
+    - tôi cần hỗ trợ
+    - toi can ho tro
+    - cho tôi hỏi
+    - cho toi hoi
+    - giúp anh với
+    - giup anh voi
+    - help me
+
+- intent: camon
+  examples: |
+    - cám ơn nhé
+    - cám ơn
+    - cam on nhe
+    - cam on
+    - thank you
+    - thankyou
+    - thanks
+    - thank
+    - thankiu
+    - không, cám ơn em
+    - khong, cam on
+    - ok, cam on
+    - ok, camon

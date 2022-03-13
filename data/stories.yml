@@ -1,0 +1,80 @@
+version: "3.0"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: greet hd_dongphi 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_trogiup
+  - intent: hd_dongphi
+  - action: utter_hd_dongphi
+  - action: utter_confirm
+  - intent: affirm
+  - action: utter_trogiupthem
+
+- story: greet hd_dongphi 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_trogiup
+  - intent: hd_dongphi
+  - action: utter_hd_dongphi
+  - action: utter_confirm
+  - intent: deny
+  - action: utter_loidongphi
+  - intent: quenmatkhau
+  - action: utter_quenmatkhau
+  - action: utter_confirm
+  - intent: affirm
+  - action: utter_trogiupthem
+
+- story: greet quenmatkhau
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_trogiup
+  - intent: quenmatkhau
+  - action: utter_quenmatkhau
+  - action: utter_confirm
+  - intent: affirm
+  - action: utter_trogiupthem
+
+- story: camon trogiupthem
+  steps:
+  - intent: camon
+  - action: utter_camon
+  - action: utter_trogiupthem
+
+- story: affirm trogiupthem
+  steps:
+  - intent: affirm
+  - action: utter_camon
+  - action: utter_trogiupthem

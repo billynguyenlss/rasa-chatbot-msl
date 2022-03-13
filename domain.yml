@@ -1,0 +1,80 @@
+version: "3.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - hd_dongphi
+  - quenmatkhau
+  - trogiup
+  - camon
+
+responses:
+  utter_greet:
+  - text: "Xin chào anh chị, em là Lily, trợ lý ảo của anh Long."
+
+  utter_trogiup:
+  - text: "Anh chị cần em hỗ trợ không ạ?"
+    buttons:
+    - title: "Hướng dẫn đóng phí"
+      payload: "/hd_dongphi"
+    - title: "Quên mật khẩu"
+      payload: "/quenmatkhau"
+
+  utter_trogiupthem:
+  - text: "Anh chị cần em hỗ trợ gì thêm không ạ?"
+    buttons:
+    - title: "Hướng dẫn đóng phí"
+      payload: "/hd_dongphi"
+    - title: "Quên mật khẩu"
+      payload: "/quenmatkhau"
+
+  utter_cheer_up:
+  - text: "Vui lên anh chị nhé"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Điều này có làm anh chị cảm thấy tốt hơn không?"
+
+  utter_happy:
+  - text: "Tuyệt vời ông mặt trời!"
+
+  utter_goodbye:
+  - text: "Cám ơn và hẹn gặp lại anh chị ạ."
+
+  utter_iamabot:
+  - text: "Mình là trợ lý ảo Lily."
+
+  utter_confirm:
+  - text: "Anh chị đã làm được chưa ạ?"
+    buttons:
+    - title: "Đã thực hiện được"
+      payload: "/affirm"
+    - title: "Chưa thực hiện được"
+      payload: "/deny"
+
+  utter_hd_dongphi:
+  - text: "Để thực hiện đóng phí anh chị vui lòng làm theo hướng dẫn như sau ạ."
+    image: "https://thebank.vn/uploads/2020/10/25/thebank_cachdongphibaohiemsunlifeantoanvanhanhchong1_1603595536.png"
+
+  utter_loidongphi:
+  - text: "Anh chị đang gặp lỗi nào sau đây không ạ?"
+    buttons:
+    - title: "Không nhận được OTP"
+    - title: "Quên mật khẩu"
+      payload: "/quenmatkhau"
+
+  utter_quenmatkhau:
+  - text: "Để lấy lại mật khẩu mới, anh chị vui lòng làm theo hướng dẫn như sau ạ."
+    image: "https://thebank.vn/uploads/2020/10/07/thebank_huongdantracuuhopdongbaohiemsunlifedongiannhat5_1602036769.png"
+
+  utter_camon:
+  - text: "😀"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
