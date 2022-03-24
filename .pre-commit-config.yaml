@@ -1,0 +1,66 @@
+repos:
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v2.3.0
+    hooks:
+    -   id: check-yaml
+        exclude:
+            .github |
+            .rasa |
+            .venv  |
+            .vscode |
+            img |
+            models |
+            tests |
+            __pycache__
+    -   id: trailing-whitespace
+        exclude:
+            .github |
+            .rasa |
+            .venv  |
+            .vscode |
+            img |
+            models |
+            tests |
+            __pycache__
+-   repo: https://github.com/psf/black
+    rev: 21.12b0
+    hooks:
+    -   id: black
+        args: [ --config=black.toml ]
+        exclude:
+            .github |
+            .rasa |
+            .venv  |
+            .vscode |
+            img |
+            models |
+            tests |
+            __pycache__
+-   repo: https://github.com/pre-commit/mirrors-isort
+    rev: 1ba6bfc # Use the revision sha / tag you want to point at
+    hooks:
+      - id: isort
+        args: [ "--profile", "black" ]
+        exclude:
+            .github |
+            .rasa |
+            .venv  |
+            .vscode |
+            img |
+            models |
+            tests |
+            __pycache__
+-   repo: https://gitlab.com/pycqa/flake8
+    rev: 3.9.2
+    hooks:
+      - id: flake8
+        args: [ --config=tox.ini ]
+        exclude:
+            .github |
+            .rasa |
+            .venv  |
+            .vscode |
+            img |
+            models |
+            tests |
+            __pycache__

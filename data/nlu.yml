@@ -187,7 +187,7 @@ nlu:
     - không nhớ [mật khẩu]{"entity":"matkhau"} [my sun life]{"entity":"mysunlife"}
     - quên [pass]{"entity":"matkhau"} đăng nhập
     - quen [pass]{"entity":"matkhau"} dang nhap
-    - quên [password]{"entity":"matkhau"} 
+    - quên [password]{"entity":"matkhau"}
     - quen [password]{"entity":"matkhau"}
     - có cách nào lấy lại [mật khẩu]{"entity":"matkhau"} không?
     - có cách nào lấy lại [password]{"entity":"matkhau"} không?

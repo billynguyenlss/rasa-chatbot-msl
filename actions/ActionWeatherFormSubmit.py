@@ -1,18 +1,17 @@
-from typing import Any, Text, Dict, List
+from datetime import date, timedelta
+from typing import Any, Dict, List, Text
 
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
-from datetime import date, timedelta
 
 
 class ActionWeatherFormSubmit(Action):
-
     def name(self) -> Text:
         return "action_weather_form_submit"
 
-    def run(self, dispatcher: CollectingDispatcher,
-            tracker: Tracker,
-            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+    def run(
+        self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]
+    ) -> List[Dict[Text, Any]]:
         city = tracker.get_slot("address")
         text_date = tracker.get_slot("date")
         # query_date = self._get_date(text_date)
