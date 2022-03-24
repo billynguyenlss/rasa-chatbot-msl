@@ -94,6 +94,12 @@ nlu:
     - khong phai
     - chac khong em oi
     - khong
+    - không, cám ơn em
+    - khong, cam on em
+    - không, được rồi
+    - khong, duoc roi
+    - không, ok e nhé
+    - khong, ok e nhe
 
 - intent: mood_great
   examples: |
@@ -146,34 +152,45 @@ nlu:
 
 - intent: hd_dongphi
   examples: |
-    - hướng dẫn đóng phí
-    - huong dan dong phi
-    - cách đóng phí
-    - cach dong phi
-    - làm thế nào để đóng phí
-    - lam the nao de dong phi
-    - toi muon dong phi
-    - tôi muốn đóng phí
-    - tôi muốn đóng tiền
-    - toi muon dong tien
-    - làm thế nào để đóng tiền
-    - lam the nao de dong tien
-    - cách đóng tiền
-    - cach dong tien
+    - hướng dẫn [đóng phí]{"entity":"dongphi"}
+    - huong dan [dong phi]{"entity":"dongphi"}
+    - cách [đóng phí]{"entity":"dongphi"}
+    - cach [dong phi]{"entity":"dongphi"}
+    - làm thế nào để [đóng phí]{"entity":"dongphi"}
+    - lam the nao de [dong phi]{"entity":"dongphi"}
+    - toi muon [dong phi]{"entity":"dongphi"}
+    - tôi muốn [đóng phí]{"entity":"dongphi"}
+    - tôi muốn [đóng tiền]{"entity":"dongphi"}
+    - toi muon [dong tien]{"entity":"dongphi"}
+    - làm thế nào để [đóng tiền]{"entity":"dongphi"}
+    - lam the nao de [dong tien]{"entity":"dongphi"}
+    - cách [đóng tiền]{"entity":"dongphi"}
+    - cach [dong tien]{"entity":"dongphi"}
+    - đã thử nhiều cách nhưng vẫn không đóng phí được
+    - tôi tìm nãy giờ nhưng không biết đóng phí làm sao
+    - từ sáng đến giờ vẫn chưa đóng phí được nè
+    - ới ới, chỉ tôi cách đóng phí
+    - sao mà đóng phí khó quá đi
 
 - intent: quenmatkhau
   examples: |
-    - quên mật khẩu msl
-    - quên mật khẩu my sun life
-    - quên mật khẩu my sl
-    - quen mat khau msl
-    - quen mat khau my sun life
-    - quen mat khau my sl
-    - tôi không đăng nhập được ứng dụng msl
-    - toi khong dang nhap duoc ung dung my sun life
-    - toi khong dang nhap duoc my sl
-    - khong nho mat khau my sl
-    - không nhớ mật khẩu my sun life
+    - quên [mật khẩu]{"entity":"matkhau"} [msl]{"entity":"mysunlife"}
+    - quên [mật khẩu]{"entity":"matkhau"} [my sun life]{"entity":"mysunlife"}
+    - quên [mật khẩu]{"entity":"matkhau"} [my sl]{"entity":"mysunlife"}
+    - quen [mat khau]{"entity":"matkhau"} [msl]{"entity":"mysunlife"}
+    - quen [mat khau]{"entity":"matkhau"} [my sun life]{"entity":"mysunlife"}
+    - quen [mat khau]{"entity":"matkhau"} [my sl]{"entity":"mysunlife"}
+    - tôi không đăng nhập được ứng dụng [msl]{"entity":"mysunlife"}
+    - toi khong dang nhap duoc ung dung [my sun life]{"entity":"mysunlife"}
+    - toi khong dang nhap duoc [my sl]{"entity":"mysunlife"}
+    - khong nho [mat khau]{"entity":"matkhau"} [my sl]{"entity":"mysunlife"}
+    - không nhớ [mật khẩu]{"entity":"matkhau"} [my sun life]{"entity":"mysunlife"}
+    - quên [pass]{"entity":"matkhau"} đăng nhập
+    - quen [pass]{"entity":"matkhau"} dang nhap
+    - quên [password]{"entity":"matkhau"} 
+    - quen [password]{"entity":"matkhau"}
+    - có cách nào lấy lại [mật khẩu]{"entity":"matkhau"} không?
+    - có cách nào lấy lại [password]{"entity":"matkhau"} không?
 
 - intent: trogiup
   examples: |
@@ -186,6 +203,10 @@ nlu:
     - giúp anh với
     - giup anh voi
     - help me
+    - giúp tôi với
+    - help
+    - giúp với
+    - cần được giúp đỡ
 
 - intent: camon
   examples: |
@@ -202,3 +223,59 @@ nlu:
     - khong, cam on
     - ok, cam on
     - ok, camon
+
+- intent: query_time
+  examples: |
+    - bây giờ là mấy [giờ]{"entity":"time"}
+    - bay gio la may [gio]{"entity":"time"}
+    - mấy [giờ]{"entity":"time"} rồi
+    - may [gio]{"entity":"time"} roi
+
+- intent: query_date
+  examples: |
+    - [hôm nay]{"entity":"date"} là ngày mấy
+    - [ngày mai]{"entity":"date"} là ngày mấy
+    - [hôm qua]{"entity":"date"} là ngày mấy
+    - [ngày mốt]{"entity":"date"} là ngày mấy
+    - [hom nay]{"entity":"date"} la ngay may
+    - [ngay mai]{"entity":"date"} la ngay may
+    - [hom qua]{"entity":"date"} la ngay may
+    - [ngay mot]{"entity":"date"} la ngay may
+
+- intent: weather
+  examples: |
+    - Display the weather in degrees Celsius
+    - I want the weather of [Shanghai]{"entity":"address"} [tomorrow]{"entity":"date"}
+    - Thời tiết [ngày mai]{"entity":"date"} thế nào
+    - Thoi tiet [ngay mai]{"entity":"date"} the nao
+    - Thời tiết [hôm nay]{"entity":"date"} thế nào
+    - Thoi tiet [hom nay]{"entity":"date"} the nao
+    - Thoi tiet [hom qua]{"entity":"date"} the nao
+    - Thời tiết [hôm qua]{"entity":"date"} thế nào
+    - Thời tiết ở [Hồ Chí Minh]{"entity":"address"} [hôm nay]{"entity":"date"} thế nào?
+    - Thoi tiet o [Ho Chi Minh]{"entity":"address"} [hom nay]{"entity":"date"} thế nào?
+- intent: info_address
+  examples: |
+    - Tell me how about [Rome]{"entity":"address"}
+    - Bạn biết gì về [Rome]{"entity":"address"}
+    - Ban biet gi ve [Rome]{"entity":"address"}
+    - Tôi sống ở [Hồ Chí Minh]{"entity":"address"}
+    - Toi song o [Ho Chi Minh]{"entity":"address"}
+    - Văn phòng đặt tại [Hà Nội]{"entity":"address"}
+    - Van phong dat tai [Ha Noi]{"entity":"address"}
+    - Ở [Đà Nẵng]{"entity":"address"}
+    - o [Da Nang]{"entity":"address"}
+
+- intent: faq/interview_paperwork
+  examples: |
+    - documents do I need to bring to the interview?
+    - Đi phỏng vấn cần mang những giấy tờ gì?
+    - di phong van can mang nhung giay to gi
+
+- intent: faq/interview_result
+  examples: |
+    - How to check the interview result?
+    - Khi nào thì biết kết quả phỏng vấn?
+    - Công ty sẽ thông báo kết quả phỏng vấn chứ?
+    - Khi nao thi biet ket qua phong van?
+    - COng ty se thong bao ket qua phong van chu?

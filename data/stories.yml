@@ -6,13 +6,13 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
+  - action: utter_trogiup
 
 - story: sad path 1
   steps:
   - intent: greet
   - action: utter_greet
+  - action: utter_trogiup
   - intent: mood_unhappy
   - action: utter_cheer_up
   - action: utter_did_that_help
@@ -23,6 +23,7 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
+  - action: utter_trogiup
   - intent: mood_unhappy
   - action: utter_cheer_up
   - action: utter_did_that_help
@@ -56,6 +57,35 @@ stories:
   - intent: affirm
   - action: utter_trogiupthem
 
+- story: hd_dongphi 1
+  steps:
+  - intent: hd_dongphi
+  - action: utter_hd_dongphi
+  - action: utter_confirm
+  - intent: affirm
+  - action: utter_trogiupthem
+
+- story: hd_dongphi 2
+  steps:
+  - intent: hd_dongphi
+  - action: utter_hd_dongphi
+  - action: utter_confirm
+  - intent: deny
+  - action: utter_loidongphi
+  - intent: quenmatkhau
+  - action: utter_quenmatkhau
+  - action: utter_confirm
+  - intent: affirm
+  - action: utter_trogiupthem
+
+- story: quenmatkhau 1
+  steps:
+  - intent: quenmatkhau
+  - action: utter_quenmatkhau
+  - action: utter_confirm
+  - intent: affirm
+  - action: utter_trogiupthem
+
 - story: greet quenmatkhau
   steps:
   - intent: greet
@@ -78,3 +108,14 @@ stories:
   - intent: affirm
   - action: utter_camon
   - action: utter_trogiupthem
+
+- story: query time
+  steps:
+  - intent: query_time
+  - action: action_query_time
+
+- story: query date
+  steps:
+  - intent: query_date
+  - action: action_query_date
+  

@@ -11,3 +11,31 @@ rules:
   steps:
   - intent: bot_challenge
   - action: utter_iamabot
+
+- rule: Ask user to speak again
+  steps:
+  - intent: nlu_fallback
+  - action: utter_please_rephase
+
+- rule: map to faq
+  steps:
+  - intent: faq
+  - action: utter_faq
+
+- rule: activate weather form
+  steps:
+    - intent: weather
+    - action: weather_form
+    - active_loop: weather_form
+
+- rule: Submit form
+  condition:
+    # condition that form is active
+    - active_loop: weather_form
+  steps:
+    - action: weather_form
+    - active_loop: null
+    - slot_was_set:
+      - requested_slot: null
+    # The action we want to run when the form is submitted.
+    - action: action_weather_form_submit
